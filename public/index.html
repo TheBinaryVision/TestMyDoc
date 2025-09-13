@@ -3,168 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test My Doc - Exam Center</title>
-    <!-- Link to your external CSS file -->
+    <title>Test My Doctor - Exam Center</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="header">
         <div class="logo-container">
-            <!-- Simple SVG Stethoscope Icon -->
             <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#2980b9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M3 3v6a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V3"></path>
                 <path d="M12 12v7a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-7"></path>
                 <circle cx="12" cy="12" r="10"></circle>
                 <circle cx="12" cy="12" r="3"></circle>
             </svg>
-            <span class="logo-text">Test My Doc</span>
+            <span class="logo-text">Test My Doctor</span>
         </div>
-        <p>Central dashboard for all available tests and assessments for Docters.<br> Updates will be availabledsoon</p>
+         <!-- User Navigation: Login/Profile/Logout links will be managed by auth.js -->
+        <nav class="user-nav">
+            <a href="userprofilepage.html" id="profile-link" class="nav-link" style="display: none;">My Profile</a>
+            <a href="login.html" id="login-link" class="nav-link">Login</a>
+            <button id="logout-button" class="nav-link" style="display: none;">Logout</button>
+        </nav>
+        <p>Your central dashboard for all available tests and assessments.</p>
         
-        <!-- NEW: Search Bar Added -->
         <div class="search-container">
             <input type="text" id="search-bar" placeholder="Search for an exam...">
         </div>
     </header>
     
     <main class="portal-container">
-
         <h2 class="category-title">All Available Exams</h2>
-        <div class="exam-grid">
+        <div class="exam-grid" id="exam-grid">
             
-            <!-- Exam Card 1 -->
-            <div class="exam-card">
+            <div class="exam-card" data-title="Anaesthesia">
                 <h3>Anaesthesia</h3>
                 <p>A comprehensive test on the principles and practices of anaesthesia.</p>
                 <a href="testlink/prepx_Anaesthesia.html" class="start-button" target="_blank" rel="noopener noreferrer">Start Test</a>
             </div>
-
-            <!-- Exam Card 2 -->
-            <div class="exam-card">
+            <div class="exam-card" data-title="Anatomy">
                 <h3>Anatomy</h3>
                 <p>Assess your knowledge of the human body structure and systems.</p>
                 <a href="testlink/prepx_Anatomy.html" class="start-button" target="_blank" rel="noopener noreferrer">Start Test</a>
             </div>
-
-            <!-- Exam Card 3 -->
-            <div class="exam-card">
+            <div class="exam-card" data-title="Biochemistry">
                 <h3>Biochemistry</h3>
                 <p>Test your understanding of chemical processes within living organisms.</p>
                 <a href="testlink/prepx_Biochemistry.html" class="start-button" target="_blank" rel="noopener noreferrer">Start Test</a>
             </div>
-
-            <!-- Exam Card 4 -->
-            <div class="exam-card">
+            <div class="exam-card" data-title="Dermatology">
                 <h3>Dermatology</h3>
                 <p>A test focusing on the skin, its structure, functions, and diseases.</p>
                 <a href="testlink/prepx_Dermatology.html" class="start-button" target="_blank" rel="noopener noreferrer">Start Test</a>
             </div>
-
-            <!-- Exam Card 5 -->
-            <div class="exam-card">
+            <div class="exam-card" data-title="ENT">
                 <h3>ENT</h3>
                 <p>Exam covering conditions of the ear, nose, and throat.</p>
                 <a href="testlink/prepx_ENT.html" class="start-button" target="_blank" rel="noopener noreferrer">Start Test</a>
             </div>
-
-            <!-- Exam Card 6 -->
-            <div class="exam-card">
+            <div class="exam-card" data-title="Forensic Medicine">
                 <h3>Forensic Medicine</h3>
                 <p>Assess your knowledge of medicine as it applies to the law.</p>
                 <a href="testlink/prepx_Forensic_Medicine.html" class="start-button" target="_blank" rel="noopener noreferrer">Start Test</a>
             </div>
-            
-            <!-- Exam Card 7 -->
-            <div class="exam-card">
+            <div class="exam-card" data-title="Gynaecology Obstetrics">
                 <h3>Gynaecology & Obstetrics</h3>
                 <p>Test on female reproductive health, pregnancy, and childbirth.</p>
                 <a href="testlink/prepx_Gynaecology__Obstetrics.html" class="start-button" target="_blank" rel="noopener noreferrer">Start Test</a>
             </div>
-
-            <!-- Exam Card 8 -->
-            <div class="exam-card">
+            <div class="exam-card" data-title="Medicine">
                 <h3>Medicine</h3>
                 <p>A general test on the practice of internal medicine and diagnostics.</p>
                 <a href="testlink/prepx_Medicine.html" class="start-button" target="_blank" rel="noopener noreferrer">Start Test</a>
             </div>
-
-            <!-- Exam Card 9 -->
-            <div class="exam-card">
+            <div class="exam-card" data-title="Ophthalmology">
                 <h3>Ophthalmology</h3>
                 <p>A test focusing on the anatomy, physiology, and diseases of the eye.</p>
                 <a href="testlink/prepx_Ophthalmology.html" class="start-button" target="_blank" rel="noopener noreferrer">Start Test</a>
             </div>
-
-            <!-- Exam Card 10 -->
-            <div class="exam-card">
+            <div class="exam-card" data-title="Orthopaedics">
                 <h3>Orthopaedics</h3>
                 <p>Covers the musculoskeletal system, including bones, joints, and ligaments.</p>
                 <a href="testlink/prepx_Orthopaedics.html" class="start-button" target="_blank" rel="noopener noreferrer">Start Test</a>
             </div>
-
-            <!-- Exam Card 11 -->
-            <div class="exam-card">
+            <div class="exam-card" data-title="Pathology">
                 <h3>Pathology</h3>
                 <p>This test focuses on the cause and effect of disease.</p>
                 <a href="testlink/prepx_Pathology.html" class="start-button" target="_blank" rel="noopener noreferrer">Start Test</a>
             </div>
-
-            <!-- Exam Card 12 -->
-            <div class="exam-card">
+            <div class="exam-card" data-title="Pediatrics">
                 <h3>Pediatrics</h3>
                 <p>Assess your knowledge in the medical care of infants, children, and adolescents.</p>
                 <a href="testlink/prepx_Pediatrics.html" class="start-button" target="_blank" rel="noopener noreferrer">Start Test</a>
             </div>
-
-            <!-- Exam Card 13 -->
-            <div class="exam-card">
+            <div class="exam-card" data-title="Pharmacology">
                 <h3>Pharmacology</h3>
                 <p>This test covers the uses, effects, and modes of action of drugs.</p>
                 <a href="testlink/prepx_Pharmacology.html" class="start-button" target="_blank" rel="noopener noreferrer">Start Test</a>
             </div>
-
-            <!-- Exam Card 14 -->
-            <div class="exam-card">
+            <div class="exam-card" data-title="Physiology">
                 <h3>Physiology</h3>
                 <p>A fundamental test on the normal functions of living organisms.</p>
                 <a href="testlink/prepx_Physiology.html" class="start-button" target="_blank" rel="noopener noreferrer">Start Test</a>
             </div>
-
-            <!-- Exam Card 15 -->
-            <div class="exam-card">
+            <div class="exam-card" data-title="PSM">
                 <h3>PSM</h3>
                 <p>Test on Preventive and Social Medicine and community health.</p>
                 <a href="testlink/prepx_PSM.html" class="start-button" target="_blank" rel="noopener noreferrer">Start Test</a>
             </div>
-
-            <!-- Exam Card 16 -->
-            <div class="exam-card">
+            <div class="exam-card" data-title="Psychiatry">
                 <h3>Psychiatry</h3>
                 <p>Assess your knowledge of mental disorders and their diagnosis.</p>
                 <a href="testlink/prepx_Psychiatry.html" class="start-button" target="_blank" rel="noopener noreferrer">Start Test</a>
             </div>
-
-            <!-- Exam Card 17 -->
-            <div class="exam-card">
+            <div class="exam-card" data-title="Radiology">
                 <h3>Radiology</h3>
                 <p>A test on medical imaging to diagnose and treat diseases.</p>
                 <a href="testlink/prepx_Radiology.html" class="start-button" target="_blank" rel="noopener noreferrer">Start Test</a>
             </div>
-
-            <!-- Exam Card 18 -->
-            <div class="exam-card">
+            <div class="exam-card" data-title="Surgery">
                 <h3>Surgery</h3>
                 <p>A fundamental test on pre-operative and post-operative care principles.</p>
                 <a href="testlink/prepx_Surgery.html" class="start-button" target="_blank" rel="noopener noreferrer">Start Test</a>
             </div>
-
         </div>
-
     </main>
 
-    <!-- Link to your external JavaScript file -->
-    <script src="script.js"></script>
+    <!-- Import JavaScript files -->
+    <!-- These MUST be type="module" to use ES6 imports in Firebase v9+ -->
+    <script type="module" src="auth.js"></script>
+    <script type="module" src="script.js"></script>
+
 </body>
 </html>
-

@@ -33,6 +33,30 @@ body {
     color: #2c3e50;
 }
 
+/* User Navigation */
+.user-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+.nav-link {
+    background: none;
+    border: 1px solid #2980b9;
+    color: #2980b9;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+.nav-link:hover {
+    background-color: #2980b9;
+    color: white;
+}
+
+
 .header p {
     font-size: 1.1rem;
     color: #7f8c8d;
@@ -134,6 +158,84 @@ body {
     background-color: #229954;
 }
 
+/* --- Login/Auth Page Styles --- */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+.auth-box {
+    background: white;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.auth-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.auth-box button:hover {
+    background-color: #3498db;
+}
+.auth-toggle {
+    margin-top: 1.5rem;
+}
+.error-message {
+    color: #c0392b;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* --- Profile Page Styles --- */
+.results-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+.results-table th, .results-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+.results-table th {
+    background-color: #f4f7f9;
+    font-weight: bold;
+}
+
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
     body {
@@ -143,7 +245,7 @@ body {
         font-size: 2rem;
     }
     .exam-grid {
-        grid-template-columns: 1fr; /* Stack cards on top of each other */
+        grid-template-columns: 1fr;
     }
 }
 
