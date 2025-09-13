@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Test My Doctor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-container">
+            <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 12px;">
+                <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#2980b9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 3v6a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V3"></path>
+                    <path d="M12 12v7a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-7"></path>
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <span class="logo-text">Test My Doctor</span>
+            </a>
+        </div>
+        <nav class="user-nav">
+            <a href="profile.html" id="profile-link" class="nav-link" style="display: none;">My Profile</a>
+            <a href="login.html" id="login-link" class="nav-link">Login</a>
+            <button id="logout-button" class="nav-link" style="display: none;">Logout</button>
+        </nav>
+    </header>
+
+    <main class="portal-container">
+        <h2 id="profile-welcome">Welcome, Doctor!</h2>
+        <p>Here is a summary of your past test results.</p>
+        
+        <div class="results-container">
+            <h3>Your Scores</h3>
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Test Name</th>
+                        <th>Score</th>
+                        <th>Date Taken</th>
+                    </tr>
+                </thead>
+                <tbody id="results-body">
+                    <!-- Test results will be dynamically inserted here by profile.js -->
+                    <tr><td colspan="3">Loading your test results...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    
+    <script type="module" src="auth.js"></script>
+    <script type="module" src="profile.js"></script>
+</body>
+</html>
